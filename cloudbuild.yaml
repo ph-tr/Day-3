@@ -1,4 +1,3 @@
-# Deploy serverless function
 steps:
   # Deploy
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -13,4 +12,4 @@ steps:
       - --runtime=python312
       - --entry-point=hello
 options:
-  logging: NONE
+  logging: CLOUD_LOGGING_ONLY
