@@ -1,0 +1,19 @@
+name: mydb
+
+services:
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=abc123
+      
+  app:
+    # To relaunch app, run the following
+    # docker compose -f mydb.yaml up -d --no-deps --build app
+    build: mydbapp
+    restart: unless-stopped
+    ports:
+      - "8888:8000"
+    depends_on:
+      - db

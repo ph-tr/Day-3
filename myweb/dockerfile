@@ -1,0 +1,10 @@
+FROM python
+
+WORKDIR /app
+COPY static /app/static
+COPY templates /app/templates
+COPY myweb.py /app/myweb.py
+COPY program3.py /app/program3.py
+
+RUN ["pip", "install", "fastapi[standard]"]
+CMD ["fastapi", "run", "myweb.py"]
