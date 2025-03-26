@@ -6,9 +6,11 @@ steps:
       - gcloud
       - functions
       - deploy
-      - my-http-function-phitsanu
+      - my-http-function
       - --region=asia-southeast1
       - --source=serverless
       - --trigger-http
       - --runtime=python312
       - --entry-point=hello
+options:
+  logging: NONE
