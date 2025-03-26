@@ -4,17 +4,14 @@ steps:
       - gcloud
       - functions
       - deploy
-      - my-http-function
+      - my-http-ton-function
       - --region=asia-southeast1
       - --source=.
       - --trigger-http
       - --runtime=python312
       - --entry-point=hello
       - --gen2
-      
-build:
-  service_account: cloud-build-service-account@my-project-101-454903.iam.gserviceaccount.com
-  logs_bucket: gs://gcf-v2-sources-766657476274-asia-southeast1
-  
+
+serviceAccount: projects/my-project-101-454903/serviceAccounts/cloud-build-service-account@my-project-101-454903.iam.gserviceaccount.com
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: NONE
