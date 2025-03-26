@@ -14,3 +14,4 @@ steps:
       - --entry-point=hello
 options:
   logging: NONE
+  serviceAccount: projects/my-project-101-454903/serviceAccounts/phitsanu-tr@my-project-101-454903.iam.gserviceaccount.com
