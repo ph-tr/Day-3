@@ -11,7 +11,8 @@ steps:
       - --runtime=python312
       - --entry-point=hello
 build:
-  service_account: phitsanu-tr@my-project-101-454903.iam.gserviceaccount.com
+  service_account: cloud-build-service-account@my-project-101-454903.iam.gserviceaccount.com
+
 options:
   logging: NONE
   default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
