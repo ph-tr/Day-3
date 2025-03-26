@@ -1,6 +1,4 @@
-# Deploy serverless function
 steps:
-  # Deploy
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args:
       - gcloud
@@ -12,5 +10,8 @@ steps:
       - --trigger-http
       - --runtime=python312
       - --entry-point=hello
+build:
+  service_account: your-service-account
 options:
   logging: NONE
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
