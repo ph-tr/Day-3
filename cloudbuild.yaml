@@ -11,7 +11,7 @@ steps:
       - --runtime=python312
       - --entry-point=hello
 build:
-  service_account: dsdsfdsfsdf@my-project-101-454903.iam.gserviceaccount.com
+  service_account: fdsfdsfdsfdsf@my-project-101-454903.iam.gserviceaccount.com
   logs_bucket: gs://gcf-v2-sources-766657476274-asia-southeast1  # Specify the bucket for logs
 options:
   logging: NONE  # or CLOUD_LOGGING_ONLY if you prefer Cloud Logging
