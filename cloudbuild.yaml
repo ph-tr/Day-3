@@ -1,0 +1,14 @@
+# Deploy serverless function
+steps:
+  # Deploy
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - my-http-function
+      - --region=asia-southeast1
+      - --source=serverless
+      - --trigger-http
+      - --runtime=python312
+      - --entry-point=hello
