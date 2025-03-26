@@ -1,3 +1,4 @@
+# Deploy serverless function
 steps:
   # Deploy
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -11,10 +12,5 @@ steps:
       - --trigger-http
       - --runtime=python312
       - --entry-point=hello
-
 options:
-  logging: CLOUD_LOGGING_ONLY
-  # ใช้ตัวเลือกนี้หากไม่ต้องการกำหนด logs bucket เอง
-  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
-  # หรือถ้าคุณต้องการกำหนด logs bucket เอง:
-  # logsBucket: "gs://your-bucket-name"
+  logging: NONE
