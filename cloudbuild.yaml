@@ -11,5 +11,8 @@ steps:
       - --trigger-http
       - --runtime=python312
       - --entry-point=hello
+build:
+  service_account: phitsanu-tr@my-project-101-454903.iam.gserviceaccount.com
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: NONE
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
