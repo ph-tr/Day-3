@@ -12,8 +12,6 @@ steps:
       - --entry-point=hello
 build:
   service_account: dsdsfdsfsdf@my-project-101-454903.iam.gserviceaccount.com
-
 options:
-  logging: NONE
-  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
-
+  logging: CLOUD_LOGGING_ONLY  # Or set to NONE if you don't want logs
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET  # Optional if you want a regional bucket
