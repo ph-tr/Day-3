@@ -12,6 +12,7 @@ steps:
       - --entry-point=hello
 build:
   service_account: dsdsfdsfsdf@my-project-101-454903.iam.gserviceaccount.com
+  logs_bucket: gs://gcf-v2-sources-766657476274-asia-southeast1  # Specify the bucket for logs
 options:
-  logging: CLOUD_LOGGING_ONLY  # Or set to NONE if you don't want logs
-  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET  # Optional if you want a regional bucket
+  logging: NONE  # or CLOUD_LOGGING_ONLY if you prefer Cloud Logging
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
