@@ -6,7 +6,7 @@ steps:
       - gcloud
       - functions
       - deploy
-      - my-http-function
+      - my-http-function-phitsanu
       - --region=asia-southeast1
       - --source=serverless
       - --trigger-http
