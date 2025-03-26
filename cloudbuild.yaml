@@ -12,5 +12,6 @@ steps:
       - --entry-point=hello
       - --gen2
       
-options:
-  logging: CLOUD_LOGGING_ONLY
+build:
+  service_account: phitsanu-tr@my-project-101-454903.iam.gserviceaccount.com
+  logs_bucket: gs://gcf-v2-sources-766657476274-asia-southeast1
