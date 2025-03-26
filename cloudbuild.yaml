@@ -13,5 +13,5 @@ steps:
       - --gen2
       
 build:
-  service_account: phitsanu-tr@my-project-101-454903.iam.gserviceaccount.com
+  service_account: cloud-build-service-account@my-project-101-454903.iam.gserviceaccount.com
   logs_bucket: gs://gcf-v2-sources-766657476274-asia-southeast1
