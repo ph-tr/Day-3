@@ -1,17 +1,16 @@
+# Deploy serverless function
 steps:
+  # Deploy
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args:
       - gcloud
       - functions
       - deploy
-      - my-http-ton-function
+      - my-http-function
       - --region=asia-southeast1
-      - --source=.
+      - --source=serverless
       - --trigger-http
       - --runtime=python312
       - --entry-point=hello
-      - --gen2
-
-serviceAccount: projects/my-project-101-454903/serviceAccounts/cloud-build-service-account@my-project-101-454903.iam.gserviceaccount.com
 options:
-  logging: NONE
+  logging: CLOUD_LOGGING_ONLY
